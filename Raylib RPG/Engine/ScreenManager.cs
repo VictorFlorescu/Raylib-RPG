@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Rectangle = Raylib_CsLo.Rectangle;
 
 namespace Engine
 {
@@ -15,7 +16,7 @@ namespace Engine
         public static Screen currentScreen;
 
         // Variables for different screens
-
+        // Logo Screen objects and variables
         public static int logoPositionX = Engine.screenWidth / 2 - 128;
         public static int logoPositionY = Engine.screenHeight / 2 - 128;
         public static int lettersCount = 0;
@@ -26,7 +27,7 @@ namespace Engine
         public static int rightSideRecHeight = 16;
         public static int state = 0;
         public static float alpha = 1.0f;
-
+        
         // Set a screen to be used / rendered
         public static void SetScreen(Screen screen)
         {
@@ -107,7 +108,6 @@ namespace Engine
 
                 case Screen.MAIN_MENU:
                     {
-
                         break;
                     }
             }
@@ -179,6 +179,9 @@ namespace Engine
                         Raylib.DrawText("Main menu", Raylib.GetScreenWidth() / 2 - Raylib.MeasureText("Main menu", 60) / 2, Raylib.GetScreenHeight() / 2 - 250, 60, Raylib.BLACK);
 
                         Raylib.DrawText("Test", Raylib.GetScreenWidth() / 2 - Raylib.MeasureText("Test", 15) / 2, Raylib.GetScreenHeight() / 2 - 7, 15, Raylib.BLACK);
+
+
+                        // -------------------------------
 
                         // Show the middle of the screen
                         //Raylib.DrawRectangle(0, Raylib.GetScreenHeight() / 2, 1280, 1, Raylib.RED);
